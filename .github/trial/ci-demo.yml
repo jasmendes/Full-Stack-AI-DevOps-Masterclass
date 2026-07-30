@@ -1,0 +1,19 @@
+name: Demo CI envs 
+
+on:
+  push 
+  # workflow_dispatch
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+          - name: Say Hello
+            run: echo "Hello from the first workflow!"
+
+          - name: Install
+            env:
+              APP_ENV: dev 
+            run: echo "Environment $APP_ENV , $JOB_APP_ENV, GLOBAL_APP_ENV"
+           
