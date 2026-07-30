@@ -21,7 +21,7 @@ jobs:
             env:
               APP_ENV: dev 
             run: |
-              echo "Environment $APP_ENV > demo.txt"
+              echo "'Environment $APP_ENV' > demo.txt"
               echo "file created demo.txt"
 
           - name: Upload Demo 
