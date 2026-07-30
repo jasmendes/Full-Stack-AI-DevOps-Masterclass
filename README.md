@@ -79,3 +79,19 @@ Thank you for respecting these guidelines and helping us maintain the integrity 
 
 
 
+
+
+
+docker login 
+docker run -d --name hello-python -p 80:3000 -e ENV_VALUE=Production joseasmendes/hello-python:latest
+
+
+
+kubectl apply -f 
+kubectl get svc 
+
+
+ClusterIp , because only inside k8s cluster 
+LoadBalancer, when need to show tothe web 
+
+NodePort -> LoadBalancer 
