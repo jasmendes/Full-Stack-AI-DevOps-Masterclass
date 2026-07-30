@@ -27,5 +27,5 @@ jobs:
           - name: Upload Demo 
             uses: actions/upload-artifact@v4
             with:
-              name: artifact
-              path: .
+              name: build-artifacts-demo
+              path: demo.txt
