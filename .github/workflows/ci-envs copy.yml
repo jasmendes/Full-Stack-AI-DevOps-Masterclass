@@ -19,12 +19,13 @@ jobs:
           
           - name: Create Demo file
             env:
-              APP_ENV: dev 
+              APP_ENV: dev
             run: |
-              echo "'Environment $APP_ENV' > demo.txt"
-              echo "file created demo.txt"
+              echo "Environment $APP_ENV" > demo.txt
+              echo "File created"
+              ls -la
 
-          - name: Upload Demo 
+          - name: Upload Demo
             uses: actions/upload-artifact@v4
             with:
               name: build-artifacts-demo
