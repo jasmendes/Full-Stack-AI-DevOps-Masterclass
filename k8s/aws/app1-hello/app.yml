@@ -14,14 +14,14 @@ spec:
     spec:
       containers:
         - name: app1-hello
-          image: joseasmendes/hello-python:latest
+          image: joseasmendes/hello-spring:latest
           env:
             - name: ENV_VALUE
               value: "Hello from app.yaml"
             - name: DB_PASSWORD
               value: "cGFzc3dvcmQ=" # base64 for 'password'
           ports:
-            - containerPort: 3000
+            - containerPort: 8080
 ---
 apiVersion: v1
 kind: Service
@@ -33,4 +33,4 @@ spec:
   type: LoadBalancer
   ports:
     - port: 80
-      targetPort: 3000  
+      targetPort: 8080  
